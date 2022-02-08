@@ -4,7 +4,7 @@ class Unicorn {
     if (color === undefined) {
       this.color = 'white';
     } else {
-    this.color = color;
+      this.color = color;
     }
   }
   isWhite() {
