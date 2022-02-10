@@ -27,6 +27,7 @@ class Vampire {
     this.name = name;
     this.ouncesDrank = 0;
     if (pet === undefined) {
+      ///try (!pet) instead or pet || 'bat'
      this.pet = 'bat'
     } else {
      this.pet = pet;
