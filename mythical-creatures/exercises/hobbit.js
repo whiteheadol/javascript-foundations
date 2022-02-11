@@ -1,6 +1,6 @@
 class Hobbit {
-  constructor({name}) {
-    this.name = name;
+  constructor(name) {
+    this.name = name.name;
     this.age = 0;
     this.adult = true;
     this.old = false;

@@ -6,10 +6,19 @@ class Medusa {
     this.name = nameInput;
     this.statues = [];
   }
-  gazeAtVictim(victim) {
-    this.statues.push(victim.name);
+  gazeAtVictim(personObj) {
+    var newStatue = new Statue(personObj.name);
+    if (this.statues.length <= 2) {
+      this.statues.push(newStatue);
+    } else {
+      this.statues.push(newStatue);
+      this.statues.shift();
+      return;
+    }
   }
 };
 
+
+//this.stutues.push(new Statue(personObj.name))
 
 module.exports = Medusa;
