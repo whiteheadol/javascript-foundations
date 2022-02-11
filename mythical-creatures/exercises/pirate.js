@@ -22,7 +22,11 @@ class Pirate {
     } else {
       return "You don't need to lift a curse!"
     }
-  };
+  }
+
+  // if(this.cursed) {
+  //   this.booty ...
+  // }
 };
 
 module.exports = Pirate;
