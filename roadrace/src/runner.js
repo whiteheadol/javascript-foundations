@@ -1,3 +1,5 @@
+var Roadrace = require('./roadrace.js')
+
 class Runner {
   constructor(nameInput, ageInput) {
     this.name = nameInput;

@@ -18,9 +18,10 @@ class Roadrace {
   }
 
   completeRace() {
-    // var newRunner = new Runner();
-    // return racer.runRace(this.name, this.distance);
-    return runner.completedRaces.push(this.name);
+    // console.log(this.participants);
+    for (var i = 0; i < this.participants.length; i++) {
+      this.participants[i].runRace(this.name, this.distance);
+    }
   }
 }
 
