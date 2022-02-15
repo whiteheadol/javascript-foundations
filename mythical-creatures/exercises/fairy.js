@@ -3,6 +3,8 @@ class Fairy {
     this.name = nameInput;
     this.dust = 10;
     this.clothes = {dresses: ['Iris']};
+    this.disposition = 'Good natured';
+    this.humanWards = [];
   };
 
   receiveBelief() {
@@ -13,37 +15,26 @@ class Fairy {
     this.dust += 10;
   }
 
-makeDresses() {
-  for (let i = 0; i < arguments.length ; i++) {
-    this.clothes.dresses.push(i);
+makeDresses(flowers) {
+  for (let i = 0; i < flowers.length ; i++) {
+    this.clothes.dresses.push(flowers[i]);
   }
   console.log(this.clothes.dreses);
-}
+  }
 
-  // makeDresses(...arguments) {
-  //   for (let arguments[i] of arguments) {
-  //     // return this.clothes.dresses += i;
-  //     this.clothes.dresses.push(i);
-  //   }
-  //   console.log(this.clothes);
-  // };
+  becomeProvoked() {
+    this.disposition = 'Vengeful';
+  }
 
-  // makeDresses([]) {
-  //   for (var i = 0; i < arguments.length; i++) {
-  //     this.clothes.dresses.push(arguments[i]);
-  //   }
-  //   return(this.clothes.dresses);
-  // }
-
-//   makeDresses(...flowers) {
-//     for (var i = 0; i < flowers.length; i++) {
-//       this.clothes.dresses.push(flowers[i]);
-//   }
-// };
-
-//   var print_names = function(...names) {
-//     for (let i=0; i<names.length; i++) console.log(names[i]);
-// }
+  replaceInfant(infantObj) {
+    if (this.disposition === 'Vengeful' && this.humanWards.length < 2) {
+      infantObj.disposition = 'Malicious';
+      this.humanWards.push(infantObj);
+    } else {
+      this.disposition = 'Good natured';
+      return infantObj;
+    }
+  }
 }
 
 module.exports = Fairy;

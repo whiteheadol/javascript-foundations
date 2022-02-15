@@ -10,7 +10,7 @@ class Craft {
   }
   calculateProjectTotal() {
     var totalCost = 0;
-    for (var i =0; i < this.materials.length; i++) {
+    for (var i = 0; i < this.materials.length; i++) {
       totalCost += this.materials[i].calculateMaterialCost();
     }
     return totalCost;
