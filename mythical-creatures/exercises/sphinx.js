@@ -12,15 +12,19 @@ class Sphinx {
       this.riddles.push(riddle);
     }
   }
+
+
   attemptAnswer(answerInput) {
     for (var i = 0; i < this.riddles.length; i++) {
-      if (this.riddles[i].answer === answerInput) {
+      if (answerInput === this.riddles[i].answer && this.riddles.length > 1) {
         this.riddles.splice(i, 1);
         return `That wasn't that hard, I bet you don't get the next one`;
+      } else if (answerInput === this.riddles[i].answer && this.riddles.length === 1) {
+        this.riddles.splice(i, 1);
+        return `PSSSSSSS THIS HAS NEVER HAPPENED, HOW DID YOU KNOW THE ANSWER WAS "${answerInput}"???`;
       }
-        // var numRiddles = this.riddles.length;
-        return (this.heroesEaten += this.riddles.length);
     }
+    return this.heroesEaten++;
   }
 }
 

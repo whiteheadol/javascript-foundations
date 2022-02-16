@@ -9,13 +9,13 @@ class Werewolf {
 
   completeTransformation() {
     if (this.form === 'human') {
-    this.form = 'wolf';
-    this.hungry = true;
-    return `Aaa-Woooo!`;
+      this.form = 'wolf';
+      this.hungry = true;
+      return `Aaa-Woooo!`;
     } else {
-    this.form = 'human';
-    this.hungry = false;
-    return `Where are I?`;
+      this.form = 'human';
+      this.hungry = false;
+      return `Where are I?`;
     }
   };
 
