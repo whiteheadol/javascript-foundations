@@ -7,13 +7,13 @@ class Ogre {
 
   encounter(humanObj) {
     humanObj.encounterCounter++;
-    this.swingAt(humanObj);
+    if (humanObj.notices = true) {
+      this.swingAt(humanObj);
+    }
   }
 
   swingAt(humanObj) {
-    // if (humanObj.noticesOgre()) {
       this.swings++;
-    // }
   }
 }
 
