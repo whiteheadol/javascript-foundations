@@ -1,6 +1,5 @@
 var Direwolf = require('./direwolf')
 
-
 class Stark {
   constructor(objName) {
     this.name = objName.name;
