@@ -9,8 +9,6 @@ class VendingMachine {
     for (var i = 0; i <= this.snacks.length; i++) {
       if (this.snacks.length === 0 || snack !== this.snacks[i]) {
         this.snacks.push(snack);
-      } else {
-        return this.snacks;
       }
     }
   }

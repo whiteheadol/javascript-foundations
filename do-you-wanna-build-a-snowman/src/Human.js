@@ -22,6 +22,10 @@ class Human {
     }
   }
 
+  // gatherMaterials(material, quantity) {
+  //   this.materials[material] += quantity;
+  // }
+
   buildASnowman() {
     var snowman = {carrots: this.materials.carrots, coal: this.materials.coal,
     buttons: this.materials.buttons, snowballs: this.materials.snowballs};
