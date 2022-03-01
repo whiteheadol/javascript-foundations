@@ -103,7 +103,7 @@ describe('Wagon', function() {
     assert.equal(wagon.clothes, clothes);
   });
 
-  it.skip('should be able to add a wheel', function() {
+  it('should be able to add a wheel', function() {
     var wheel1 = new Part('wheel');
     var wheel2 = new Part('wheel');
     var wagon = new Wagon({ name: 'Voyager', wheels: [wheel1] });
@@ -113,7 +113,7 @@ describe('Wagon', function() {
     assert.deepEqual(wagon.wheels, [wheel1, wheel2]);
   });
 
-  it.skip('should be able to add an axle', function() {
+  it('should be able to add an axle', function() {
     var axle = new Part('axle');
     var wagon = new Wagon({ name: 'Voyager' });
 
@@ -122,7 +122,7 @@ describe('Wagon', function() {
     assert.deepEqual(wagon.axles, [axle])
   });
 
-  it.skip('should be able to add an ox', function() {
+  it('should be able to add an ox', function() {
     var ox = new Part('ox');
     var wagon = new Wagon({ name: 'Voyager' });
 
@@ -131,7 +131,7 @@ describe('Wagon', function() {
     assert.deepEqual(wagon.oxen, [ox]);
   });
 
-  it.skip('should be able to add a yoke', function() {
+  it('should be able to add a yoke', function() {
     var yoke = new Part('yoke');
     var wagon = new Wagon({ name: 'Voyager' });
 
@@ -140,13 +140,13 @@ describe('Wagon', function() {
     assert.deepEqual(wagon.yokes, [yoke]);
   });
 
-  it.skip('should have no settlers by default', function() {
+  it('should have no settlers by default', function() {
     var wagon = new Wagon({ name: 'Voyager' });
 
     assert.deepEqual(wagon.settlers, []);
   });
 
-  it.skip('should be able to be constructed with settlers', function() {
+  it('should be able to be constructed with settlers', function() {
     var settler = new Settler({ name: 'Will', age: 33, nationality: 'Irish' });
     var wagon = new Wagon({ name: 'Voyager', settlers: [settler] });
 
@@ -179,13 +179,13 @@ describe('Wagon', function() {
     return wagon;
   }
 
-  it.skip('should be able to travel as a valid wagon', function() {
+  it('should be able to travel as a valid wagon', function() {
     var wagon = makeValidWagon();
 
     assert.isTrue(wagon.canTravel());
   });
 
-  it.skip('should not be able to travel with only 3 wheels', function() {
+  it('should not be able to travel with only 3 wheels', function() {
     var wagon = makeValidWagon();
 
     wagon.wheels.pop();
@@ -193,7 +193,7 @@ describe('Wagon', function() {
     assert.isFalse(wagon.canTravel());
   });
 
-  it.skip('should not be able to travel with only 1 axle', function() {
+  it('should not be able to travel with only 1 axle', function() {
     var wagon = makeValidWagon();
 
     wagon.axles.pop();
@@ -201,7 +201,7 @@ describe('Wagon', function() {
     assert.isFalse(wagon.canTravel());
   });
 
-  it.skip('should not be able to travel with less than 2 oxen', function() {
+  it('should not be able to travel with less than 2 oxen', function() {
     var wagon = makeValidWagon();
 
     wagon.oxen.pop();
@@ -209,7 +209,7 @@ describe('Wagon', function() {
     assert.isFalse(wagon.canTravel());
   });
 
-  it.skip('should not be able to travel without a yoke', function() {
+  it('should not be able to travel without a yoke', function() {
     var wagon = makeValidWagon();
 
     wagon.yokes.pop();
@@ -217,7 +217,7 @@ describe('Wagon', function() {
     assert.isFalse(wagon.canTravel());
   });
 
-  it.skip('should not be able to travel without a settler', function() {
+  it('should not be able to travel without a settler', function() {
     var wagon = makeValidWagon();
 
     wagon.settlers.pop();

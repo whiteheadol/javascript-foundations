@@ -1,32 +1,30 @@
 class Pirate {
   constructor(name, job) {
     this.name = name;
-    this.job = job || "scallywag";
+    this.job = job || 'scallywag';
     this.cursed = false;
     this.booty = 0;
   }
+
   robShip() {
-    if (this.booty < 500) {
+    if (this.booty <= 400) {
       this.booty += 100;
-      return 'YAARRR!';
+      return `YAARRR!`;
     } else {
       this.cursed = true;
-      return "ARG! I've been cursed!";
-    }
-  }
-  liftCurse() {
-    if (this.booty >= 300 && this.cursed) {
-      this.booty -= 300;
-      this.cursed = false;
-      return "Your curse has been lifted!";
-    } else {
-      return "You don't need to lift a curse!"
+      return `ARG! I've been cursed!`;
     }
   }
 
-  // if(this.cursed) {
-  //   this.booty ...
-  // }
-};
+  liftCurse() {
+    if (this.cursed) {
+      this.booty -= 300;
+      this.cursed = false;
+      return `Your curse has been lifted!`;
+    } else {
+      return `You don't need to lift a curse!`;
+    }
+  }
+}
 
 module.exports = Pirate;
