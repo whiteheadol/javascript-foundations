@@ -217,7 +217,7 @@ describe('Wagon', function() {
     assert.isFalse(wagon.canTravel());
   });
 
-  it('should not be able to travel without a settler', function() {
+  it.skip('should not be able to travel without a settler', function() {
     var wagon = makeValidWagon();
 
     wagon.settlers.pop();
