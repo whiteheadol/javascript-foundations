@@ -1,7 +1,7 @@
 class Golfer {
-  constructor(golferObj) {
-    this.name = golferObj.name;
-    this.handicap = golferObj.handicap;
+  constructor(golfer) {
+    this.name = golfer.name;
+    this.handicap = golfer.handicap;
     this.frustration = 0;
     this.confidence = 0;
   }
@@ -10,27 +10,30 @@ class Golfer {
     return `I usually shoot a ${this.handicap + par} on average.`;
   }
 
-  playRound(golfCourseInput) {
-    if (golfCourseInput.difficulty === 'hard') {
-      return this.frustration = 500;
-    } else {
-      return this.frustration = 100;
+  playRound(golfCourse) {
+    if (golfCourse.difficulty === 'hard') {
+      this.frustration += 500;
+    } else if (golfCourse.difficulty === 'moderate') {
+      this.frustration += 100;
     }
   }
+
   hitTheRange() {
-    return this.confidence += 10;
+    this.confidence += 10;
   }
-  marvel(moreGolfCourseInput) {
-    return `I love the ${moreGolfCourseInput.features[0]} and ${moreGolfCourseInput.features[1]} on this course!`;
+
+  marvel(golfCourse) {
+    return `I love the ${golfCourse.features[0]} and ${golfCourse.features[1]} on this course!`;
   }
-  whatYaShoot(scoreInput) {
-    if (scoreInput < 0) {
+
+  whatYaShoot(score) {
+    if (score < 0) {
       this.frustration = 0;
       return `I AM THE GREATEST GOLFER ALIVE!`;
-    } else if (scoreInput === 0) {
+    } else if (score === 0) {
       this.frustration = 10;
       return `Booyah!`;
-    } else {
+    } else if (score > 0) {
       this.frustration += 20;
       return `Doh!`;
     }
