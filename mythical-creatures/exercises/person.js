@@ -1,8 +1,8 @@
 class Person {
-  constructor(personName, mood) {
-    this.name = personName;
-    this.mood = mood || 'frightened';
+  constructor(name) {
+    this.name = name;
+    this.mood = 'frightened';
   }
-};
+}
 
 module.exports = Person;
